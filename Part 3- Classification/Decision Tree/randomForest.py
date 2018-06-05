@@ -82,5 +82,6 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
+
 # Conclusion: Kernel SVM classifier is the best classifer so far, which had a curve type
 # of boundary.
