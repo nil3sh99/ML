@@ -1,0 +1,57 @@
+Instructor : Vishal Sir
+
+
+Embedded Systems: To perform a specific task we design a hardware, which is known as Embedded systems.
+
+Machine learning : To train a system whose inputs are the outputs generated from arduino( ES)
+
+IOT : 
+--> Internet 
+--> Networks : No. of nodes are connected to serve sharing of data
+-->		Things capable of communication
+		
+--> IOT:
+		is diff from automation
+		It is not controlling machine remotely
+		When our system is capable of transmitting information remotely it is IOT (using sensors)
+		
+
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+
+				EMBEDDED SYSTEMS
+
+Arduino is micro controller ( only on micro controller we can do programming ) ( we need to have a memory (micro processor) to do programming)
+
+Registers are used for storing at local computer. 
+
+cache :: cpu
+
+virtual memory :: os
+
+Arduino OS --> For simplicity we use Linux OS, and that for multiple processes.
+
+Micro instruction : Load A
+Micro operation : 	Read data from memory
+			Move it on bus	
+			Make register A active
+			Transfer at time cycle T1
+
+An embedded system is an applied computer system as distinguished from other types of comp sys.
+
+Applications:
+
+Automative
+Consumer Elec
+Industrial control
+Medical Equipment
+Office Automation
+
+
+		
+
+
+		
+
+
+		
