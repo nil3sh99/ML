@@ -1,0 +1,30 @@
+ATMega32:
+ 
+14 digital pins are supported 
+
+one port
+
+PWM are 6 pins (3,5,6,9,10,11)
+ 
+A0-A5 :- for analog inputs
+
+input value possible for the board is 7-12V
+
+DC current per I/O pin - 20 mA
+
+It has 16MHZ Quartz crsytal
+
+1 ICSP header in circuit serial programming
+
+It supports 3 types of memory:
+
+1) Flash Memory : 32kb (32x1024 bytes)
+
+	0.5 kb is reserved for the boot loader (not more than 0.5 kb)
+
+2) 2 kb of Static RAM
+
+3) 1 kb for EEPROM
+
+
+
