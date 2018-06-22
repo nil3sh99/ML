@@ -15,5 +15,5 @@ imputer = imputer.fit(X[:, 1:3])
 X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 from sklearn.preprocessing import LabelEncoder
-labelencoder_X = labelEncoder()
+labelencoder_X = LabelEncoder()
 X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
