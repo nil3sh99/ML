@@ -18,6 +18,7 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder_X = LabelEncoder()
 X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
 onehotencoder = OneHotEncoder(categorical_features = [0])
+#dummy variable addition
 X = onehotencoder.categorical_features(X).toarray()
 labelencoder_y = LabelEncoder()
-
+y = labelencoder_y.fit_transform(y)
