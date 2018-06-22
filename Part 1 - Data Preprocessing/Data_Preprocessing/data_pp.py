@@ -22,3 +22,8 @@ onehotencoder = OneHotEncoder(categorical_features = [0])
 X = onehotencoder.categorical_features(X).toarray()
 labelencoder_y = LabelEncoder()
 y = labelencoder_y.fit_transform(y)
+
+#splitting dataset into training and test set
+
+from sklearn.cross_validation import train_test_split
+# after above stmt is depricated use this--> sklearn.model_selection.train_test_split()
