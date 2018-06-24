@@ -28,3 +28,6 @@ labelencoder_y = LabelEncoder()
 y = labelencoder_y.fit_transform(y)
 #training set = on which we build our machine learning model
 #test set = on which we will test our model
+
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size = 0.8, random_state = 0) 
