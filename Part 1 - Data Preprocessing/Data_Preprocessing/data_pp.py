@@ -31,3 +31,11 @@ y = labelencoder_y.fit_transform(y)
 
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size = 0.8, random_state = 0) 
+
+#feature scaling 
+
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+#no need to apply fit_transform to our test because it is already fitted on X_train
+X_test = sc_X.transform(X_train)
