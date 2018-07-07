@@ -21,3 +21,8 @@ X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 1/3, random
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
+
+#So what is machine learning in here??
+# We have our machine as LinearRegression and then we are 
+#making it learn from the training datasets of 
+# X and y. Hence is application of ML
