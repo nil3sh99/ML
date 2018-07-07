@@ -42,6 +42,14 @@ plt.ylabel('Salary')
 plt.show()
 
 
+#Visualizing the testing dataset
+
+plt.scatter(X_test, y_test, color = "red")
+plt.plot(X_train, regressor.predict(X_train))
+plt.title('Salary vs Exp (Training dataset)')
+plt.xlabel('Years of exp')
+plt.ylabel('Salary')
+plt.show()
 
 
 
