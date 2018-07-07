@@ -26,3 +26,6 @@ regressor.fit(X_train, y_train)
 # We have our machine as LinearRegression and then we are 
 #making it learn from the training datasets of 
 # X and y. Hence is application of ML
+
+y_pred = regressor.predict(X_test)
+
