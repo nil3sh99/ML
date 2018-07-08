@@ -18,6 +18,12 @@ X[:, 3] = labelencoder_X.fit_transform(X[:, 3])
 onehotencoder = OneHotEncoder(categorical_features=[3])
 X = onehotencoder.fit_transform(X).toarray()
 
+# NOTE: In the array so formed of X,  see that th 4th column of 
+# state is now replaced by the 3 columns having values as 0,1 and 
+# column names being 0,1,2
+# these three values are the types of states and 0,1 in their data
+# represents that for which column, which value is true
+
 # spliting the dataset
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.2, random_state =0)
