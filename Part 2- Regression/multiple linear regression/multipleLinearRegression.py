@@ -42,3 +42,9 @@ regressor.fit(X_train, y_train)
 # pRedicting the test result
 
 y_pred = regressor.predict(X_test)
+
+# Backward Elimination
+
+import statsmodels.formula.api as sm
+X = np.append(arr = np.ones((50,1)).astype(int),      values = X,                                   axis =1)
+             #adding 1's at 1st column of int type    appending values of X after 1st column        adding column put axis =0 for adding row instead
