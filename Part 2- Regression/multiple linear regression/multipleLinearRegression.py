@@ -1,7 +1,7 @@
 #we have to  make our model predict from the independent variable to 
 # predict the profit column i.e our dependent variable
 
-
+#importing libs
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
