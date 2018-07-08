@@ -20,9 +20,16 @@ X = onehotencoder.fit_transform(X).toarray()
 
 # NOTE: In the array so formed of X,  see that th 4th column of 
 # state is now replaced by the 3 columns having values as 0,1 and 
-# column names being 0,1,2
+# column names being 0,1S,2
 # these three values are the types of states and 0,1 in their data
 # represents that for which column, which value is true
+
+
+# Avoiding the dummy variable TRAP
+
+X = X[:, 1:]
+
+
 
 # spliting the dataset
 from sklearn.cross_validation import train_test_split
