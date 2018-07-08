@@ -48,3 +48,7 @@ y_pred = regressor.predict(X_test)
 import statsmodels.formula.api as sm
 X = np.append(arr = np.ones((50,1)).astype(int),      values = X,                                   axis =1)
              #adding 1's at 1st column of int type    appending values of X after 1st column        adding column put axis =0 for adding row instead
+# Why do we add 1 at beginning???
+# Multiple linear regression model - y = b0 + b1x1 + b2x2 ....
+             # so to add the constant values we added up the 1's column values
+
