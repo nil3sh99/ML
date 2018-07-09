@@ -51,7 +51,11 @@ plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()
 
+# Predciting a new result with Linear Regression
 
+linReg.predict(6.5) # print the predicted salary of level 6.5
+
+# Predictng the new result with the Polynomial Regression Model
 
 
 
