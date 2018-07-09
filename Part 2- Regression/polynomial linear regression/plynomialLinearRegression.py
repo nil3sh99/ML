@@ -57,5 +57,5 @@ linReg.predict(6.5) # print the predicted salary of level 6.5
 
 # Predictng the new result with the Polynomial Regression Model
 
-
+linReg2.predict(polyReg.fit_transform(6.5))
 
