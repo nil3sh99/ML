@@ -17,3 +17,11 @@ y = dataset.iloc[:, 2].values
 #from sklearn.cross_validation import train_test_split
 #X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.2, random_state =0)
 
+# Fitting Linear Regression to the dataset
+
+from sklearn.linear_model import LinearRegression
+linReg = LinearRegression()
+linReg.fit(X,y)
+
+# Fitting Polynomial Regression to the dataset
+
