@@ -28,7 +28,7 @@ linReg.fit(X,y)
 from sklearn.preprocessing import PolynomialFeatures
 # polyReg will contain x, x^2, x^3 ..... na so on
 
-polyReg = PolynomialFeatures(degree =2)
+polyReg = PolynomialFeatures(degree =3)
 X_poly = polyReg.fit_transform(X)
 linReg2 = LinearRegression()
 linReg2.fit(X_poly, y)
