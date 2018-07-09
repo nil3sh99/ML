@@ -42,8 +42,10 @@ plt.ylabel('Salary')
 plt.show()
 
 #Visualizing the Polynomial Regression Model
+X_grid = np.arange(min(X), max(X), 0.1)
+X_grid = X_grid.reshape((len(X_grid),1))
 plt.scatter(X, y, color = 'red')# represents the original points
-plt.plot(X, linReg2.predict(polyReg.fit_transform(X)), color = 'blue') # Represents the predicted points
+plt.plot(X_grid, linReg2.predict(polyReg.fit_transform(X_grid)), color = 'blue') # Represents the predicted points
 plt.title("Truth OR Bluff(Linear Regression)")  
 plt.xlabel('Position level')
 plt.ylabel('Salary')
