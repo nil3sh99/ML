@@ -41,7 +41,14 @@ plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()
 
-#
+#Visualizing the Polynomial Regression Model
+plt.scatter(X, y, color = 'red')# represents the original points
+plt.plot(X, linReg2.predict(polyReg.fit_transform(X)), color = 'blue') # Represents the predicted points
+plt.title("Truth OR Bluff(Linear Regression)")  
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
+
 
 
 
