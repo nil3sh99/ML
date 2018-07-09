@@ -31,4 +31,4 @@ from sklearn.preprocessing import PolynomialFeatures
 polyReg = PolynomialFeatures(degree =2)
 X_poly = polyReg.fit_transform(X)
 linReg2 = LinearRegression()
-lineReg2.fit(X_poly, y)
+linReg2.fit(X_poly, y)
