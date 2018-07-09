@@ -25,3 +25,10 @@ linReg.fit(X,y)
 
 # Fitting Polynomial Regression to the dataset
 
+from sklearn.preprocessing import PolynomialFeatures
+# polyReg will contain x, x^2, x^3 ..... na so on
+
+polyReg = PolynomialFeatures(degree =2)
+X_poly = polyReg.fit_transform(X)
+linReg2 = LinearRegression()
+lineReg2.fit(X_poly, y)
