@@ -11,8 +11,8 @@ import pandas as pd
 
 dataset = pd.read_csv('Position_Salaries.csv')
 X = dataset.iloc[:, 1:2].values
-y = dataset.iloc[:, 2].values
-
+y = dataset.iloc[:, 2:None].values
+#y = y.reshape(-1,-1)
 # applying feature scaling to the dataset
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
