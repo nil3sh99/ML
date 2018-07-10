@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[60]:
-
+#Using the K fold method to increase the efficiency of the program
 
 from sklearn.model_selection import KFold
 from sklearn.tree import DecisionTreeClassifier
