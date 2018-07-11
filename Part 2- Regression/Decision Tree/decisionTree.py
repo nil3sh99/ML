@@ -14,7 +14,8 @@ X = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, 2:None].values
 
 # Fitting the Decision Tree Regression to the dataset
-
+from sklearn.tree import DecisionTreeRegressor
+regressor = DecisionTreeRegressor(random_state = 0)
 
 
 # Predicting a new result
