@@ -23,7 +23,7 @@ y = dataset.iloc[:, 2:None].values
 
 # Fitting the Random Forest Regression to the dataset
 from sklearn.ensemble import RandomForestRegressor
-regressor = RandomForestRegressor(n_estimators=100, criterion="mse", random_state =0)
+regressor = RandomForestRegressor(n_estimators=300, criterion="mse", random_state =0)
 regressor.fit(X, y)
 # Predicting a new result
 y_pred = regressor.predict(6.5)
