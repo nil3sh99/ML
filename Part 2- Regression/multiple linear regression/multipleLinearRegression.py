@@ -1,3 +1,4 @@
+#commit made coz had nothing to commit today XD
 #we have to  make our model predict from the independent variable to 
 # predict the profit column i.e our dependent variable
 
