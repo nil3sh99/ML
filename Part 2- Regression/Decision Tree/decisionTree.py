@@ -16,7 +16,7 @@ y = dataset.iloc[:, 2:None].values
 # Fitting the Decision Tree Regression to the dataset
 from sklearn.tree import DecisionTreeRegressor
 regressor = DecisionTreeRegressor(random_state = 0)
-
+regressor.fit(X,y)
 
 # Predicting a new result
 y_pred = regressor.predict(6.5)
