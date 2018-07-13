@@ -80,7 +80,10 @@ facet = sns.FacetGrid(train, hue = "Survived", aspect=4)
 facet.map(sns.kdeplot, 'Age', shade = True)
 facet.set(xlim = (0, train['Age'].max()))
 facet.add_legend()
-plt.xlim(40,60)# change limit here
+plt.xlim(0,20)
+plt.xlim(20,40)
+plt.xlim(40,60)
+plt.xlim(60,80)# change limit here
 
 #-x-x-x--x-x Binning x-x--x-x-x-x
 
