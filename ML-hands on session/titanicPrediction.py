@@ -46,8 +46,14 @@ for dataset in train_test_data:
 
 train['Title'].value_counts()
 
+title_mapping = {"Mr":0, "Miss":1, "Mrs":2,
+                 "Master":3, "Dr":3, "Rev":3, "Mlle":3, "Major":3, "Col":3,
+                 "Jonkheer":3, "Lady":3, "Mme":3, "Capt":3, "Ms":3, "Don":3,
+                 "Sir":3, "Countess":3}
+for dataset in train_test_data:
+    dataset['Title'] = dataset["Title"].map(title_mapping)
 
-
+train.head()
 
 
 
