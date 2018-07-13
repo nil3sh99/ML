@@ -46,6 +46,7 @@ for dataset in train_test_data:
 
 train['Title'].value_counts()
 
+# x--x-x-x-x- Title x-x--x-x-x-x-x
 title_mapping = {"Mr":0, "Miss":1, "Mrs":2,
                  "Master":3, "Dr":3, "Rev":3, "Mlle":3, "Major":3, "Col":3,
                  "Jonkheer":3, "Lady":3, "Mme":3, "Capt":3, "Ms":3, "Don":3,
@@ -55,10 +56,61 @@ for dataset in train_test_data:
 
 train.head()
 
+train.drop('Name', axis =1, inplace = True)
+test.drop('Name', axis =1, inplace = True)
+
+train.shape
+test.shape
+
+# x-x-x-x-x- SEX -x-x-x-x-x-x
+sex_mapping = {"male":0, "female":1}
+for dataset in train_test_data:
+    dataset["Sex"] = dataset["Sex"].map(sex_mapping)
+
+train.head()
+
+# x-x-x-x-x-x-x- AGE -x-x--x-x-x-x-x-x
+train["Age"].fillna(train.groupby("Title")["Age"].transform("median"), inplace = True)
+test["Age"].fillna(train.groupby("Title")["Age"].transform("median"), inplace = True)
+
+train.head(30)
+train.groupby("Title")
+
+facet = sns.FacetGrid(train, hue = "Survived", aspect=4)
+facet.map(sns.kdeplot, 'Age', shade = True)
+facet.set(xlim = (0, train['Age'].max()))
+facet.add_legend()
+plt.xlim(40,60)# change limit here
+
+#-x-x-x--x-x Binning x-x--x-x-x-x
 
 
 
 
 
 
+
+
+
+
+
+
+
+# x-x-x--x-x-x- Embarked x-x--x-x-x-x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#-x-x--x-x-x-x Fare x--x-x-x-xx-x--x-x
 
