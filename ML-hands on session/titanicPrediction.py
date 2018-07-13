@@ -22,3 +22,6 @@ test.shape
 
 train.info()
 test.info()
+
+train.isnull().sum()# this tells how many data are absent for the train dataset
+test.isnull().sum()# this tells how many data are absent for the test dataset
