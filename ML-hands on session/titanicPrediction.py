@@ -36,4 +36,5 @@ def bar_chart(feature):
     df.index = ['survived', 'dead']
     df.plot(kind = 'bar',stacked = True, figsize=(10,5))
 
-bar_chart('Parch')
+bar_chart('Pclass')
+bar_chart('Sex')
