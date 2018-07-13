@@ -38,3 +38,21 @@ def bar_chart(feature):
 
 bar_chart('Pclass')
 bar_chart('Sex')
+
+train_test_data = [train,test] # combining the train and the test dataset
+
+for dataset in train_test_data:
+    dataset['Title'] = dataset["Name"].str.extract('([A-Za-z]+)\.', expand = False)
+
+train['Title'].value_counts()
+
+
+
+
+
+
+
+
+
+
+
