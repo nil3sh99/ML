@@ -15,3 +15,10 @@ train = pd.read_csv('train.csv')
 test = pd.read_csv('test.csv')
 
 train.head(5)
+test.head(5)
+
+train.shape
+test.shape
+
+train.info()
+test.info()
