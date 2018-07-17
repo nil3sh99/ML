@@ -32,5 +32,9 @@ y_pred = classifier.predict(X_test)
 
 # Making the Confusion Matrix
 
+# Confusion matrix gives the numner of correct and incorrect predictions
+# Starting from the top left and going along the diagnol gives us the 
+# correct values and vice versa
+
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
