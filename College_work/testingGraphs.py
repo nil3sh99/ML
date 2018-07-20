@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
 x=[1,2,3,4,5]
-#y=[7,8,3,2,1]
-#z=[2,5,6,1,8]
-y=[1,2,3,4,5]
-z=[1,2,3,4,5]
+y=[7,8,3,2,1]
+z=[2,5,6,1,8]
+
+
 
 plt.xlabel('x->')
 plt.ylabel('y->')
