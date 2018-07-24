@@ -39,3 +39,10 @@ y_pred = classifier.predict(X_test)
 
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
+
+#Visualizing the Training set results
+
+# visualization is done using the graphs
+
+
+
