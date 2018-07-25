@@ -5,6 +5,7 @@ Created on Tue Jul 24 13:08:07 2018
 
 @author: nilesh
 """
+#KNN is a non linear classification model and is more accurate than the logistic linear regression model
 
 #importing libraries
 import numpy as np
@@ -58,7 +59,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Logistic Regression (Training set)')
+plt.title('KNN')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
