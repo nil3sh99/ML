@@ -5,7 +5,6 @@ Created on Tue Jul 24 13:08:07 2018
 
 @author: nilesh
 """
-#KNN is a non linear classification model and is more accurate than the logistic linear regression model
 
 #importing libraries
 import numpy as np
@@ -29,9 +28,8 @@ X_test = sc_X.fit_transform(X_test)
 
 # Fitting LR to the training set
 # Create classifier here
-from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors=5, p = 2, metric = 'minkowski')
-classifier.fit(X_train, y_train)
+
+
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
 
@@ -59,7 +57,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('KNN')
+plt.title('Logistic Regression (Training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
@@ -77,9 +75,8 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('KNN')
+plt.title('Logistic Regression (Test set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
-
