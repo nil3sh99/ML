@@ -5,6 +5,7 @@ Created on Thu Jul 26 15:55:15 2018
 
 @author: nilesh
 """
+#SVM is a classification model
 
 # SVM works on the rule that,  a line is drawn in between the data points
 # and the distance from the adjacent Support vectors is calculated
