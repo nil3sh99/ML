@@ -32,7 +32,8 @@ X_test = sc_X.fit_transform(X_test)
 
 # Fitting SVM to the training set
 # Create classifier here
-
+from sklearn.svm import SVC
+classifier = SVC(kernel = 'linear', random_state=0)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
