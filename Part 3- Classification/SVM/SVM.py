@@ -34,7 +34,7 @@ X_test = sc_X.fit_transform(X_test)
 # Create classifier here
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'linear', random_state=0)
-
+classifier.fit(X_train, y_train)
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
 
@@ -46,7 +46,6 @@ y_pred = classifier.predict(X_test)
 
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
-
 #Visualizing the Training set results
 
 # visualization is done using the graphs
