@@ -5,6 +5,7 @@ Created on Tue Jul 24 13:08:07 2018
 
 @author: nilesh
 """
+#kernel SVM is a non-linear classifier
 
 #importing libraries
 import numpy as np
