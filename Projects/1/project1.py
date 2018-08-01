@@ -34,6 +34,8 @@ print(dataset.shape)
 #class distribution
 print(dataset.groupby('class').size())
 
+#       SINGLE VARIATE PLOTS
+
 #box and whisker plots
 dataset.plot(kind ='box', subplots = True, layout = (2,2), sharex = False, sharey= False)
 plt.show()
@@ -41,4 +43,10 @@ plt.show()
 # Drawing histograms for the input variable
 dataset.hist()
 plt.show()
+
+#       MULTI VARIATE PLOTS
+#scatter_matrix(dataset)
+#plt.show()
+
+
 
