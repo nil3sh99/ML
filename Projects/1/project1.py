@@ -19,6 +19,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.cross_validation import train_test_split
 
 # Load Dataset
 #url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
@@ -47,6 +48,9 @@ plt.show()
 #       MULTI VARIATE PLOTS
 scatter_matrix(dataset)
 plt.show()
+
+#Splitting the dataset into training and testing datasets
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.20, random_state = 0)
 
 
 
