@@ -50,6 +50,8 @@ scatter_matrix(dataset)
 plt.show()
 
 #Splitting the dataset into training and testing datasets
+X = dataset.iloc[:, 0:4]
+y = dataset.iloc[:, 4]
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.20, random_state = 0)
 
 # Check Algos
@@ -61,5 +63,15 @@ models.append(('CART', DecisionTreeClassifier()))
 models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC()))
 
-
+# Evaluating each model in turn
+results =[]
+names = []
+for name, model in models:
+    kfold = model_selection.KFold(n_splits = 10, random_state = 0)
+    cv_results = model_selection.cross_val_score(model, X_train, y_train, cv = kfold, scoring = None)
+    results.append(cv_results)
+    names.append(name)
+    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
+    
 
