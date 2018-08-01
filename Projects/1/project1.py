@@ -82,6 +82,14 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.show()
 
+#Making predictions on the validation dataset
+
+lda = LinearDiscriminantAnalysis()
+lda.fit(X_train, y_train)
+predict = lda.predict(X_test)
+#print(accuracy_score(y_train,predict))
+print(confusion_matrix(y_train, predict))
+print(classification_report(y_train, predict))
 
 
 
