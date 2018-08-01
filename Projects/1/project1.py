@@ -74,4 +74,14 @@ for name, model in models:
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
     
+# Compare Algos using box and whisher model
+fig = plt.figure()
+fig.suptitle('Algo Comp')
+ax = fig.add_subplot(111)
+plt.boxplot(results)
+ax.set_xticklabels(names)
+plt.show()
+
+
+
 
