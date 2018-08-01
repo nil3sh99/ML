@@ -52,5 +52,14 @@ plt.show()
 #Splitting the dataset into training and testing datasets
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.20, random_state = 0)
 
+# Check Algos
+models = []
+models.append(('LR', LogisticRegression()))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+models.append(('KNN', KNeighborsClassifier()))
+models.append(('CART', DecisionTreeClassifier()))
+models.append(('NB', GaussianNB()))
+models.append(('SVM', SVC()))
+
 
 
