@@ -45,8 +45,8 @@ dataset.hist()
 plt.show()
 
 #       MULTI VARIATE PLOTS
-#scatter_matrix(dataset)
-#plt.show()
+scatter_matrix(dataset)
+plt.show()
 
 
 
