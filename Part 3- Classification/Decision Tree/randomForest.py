@@ -20,12 +20,16 @@ from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.25, random_state = 0)
 
 # Feature Scaling
-
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.fit_transform(X_test)
 
 # Fitting LR to the training set
 # Create classifier here
-from sklearn. import DecisionTreeClassifier
-classifier = DecisionTreeClassifier(criterion='entropy', random_state=0)
+
+from sklearn.ensemble import RandomForestClassifier
+classifier = RandomForestClassifier(n_estimators=10, criterion='entropy', random_state= 0)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
@@ -79,3 +83,6 @@ plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 
+
+# Conclusion: Kernel SVM classifier is the best classifer so far, which had a curve type
+# of boundary.
