@@ -12,4 +12,10 @@ import hashlib
 import json
 from flask import Flask, jsonify
 
+# Building a bc
 
+class blockchain:
+    
+    def __init__(self):
+        self.chain = []
+        self.create_block(proof = 1, preHash= '0', )
