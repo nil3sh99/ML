@@ -8,14 +8,20 @@ Created on Thu Aug 16 02:21:03 2018
 
 #importing libraries
 import datetime
+# because each block will have its own time
 import hashlib
+# because we have to hash
 import json
+# because we have to use dump function
 from flask import Flask, jsonify
+# we will import flask class, and to return messagees with
+# postman app... to display results
 
-# Building a bc
 
-class blockchain:
-    
+# Building a blockchain
+
+class blockchain:    
     def __init__(self):
-        self.chain = []
-        self.create_block(proof = 1, preHash= '0', )
+        self.chain = [] # chain containing the chains --> list
+        self.create_block(proof = 1, preHash= '0')
+                                    #SHA256 can only use encoded STRINGS and hence we took it as a string
