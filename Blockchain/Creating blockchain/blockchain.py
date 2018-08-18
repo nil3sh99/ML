@@ -42,7 +42,4 @@ class blockchain:
         check_proof = False
         while check_proof is False:
             hash_operation =  hashlib.sha256(new_proof**2 - previous_proof**2) 
-        
-        
-        
-        
+            
