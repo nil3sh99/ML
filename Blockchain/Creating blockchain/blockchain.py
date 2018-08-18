@@ -34,7 +34,14 @@ class blockchain:
                  }
         self.chain.append(block) # chain is a list and hence we used its append function
         return block
-        
+    def get_previous_block(self):
+        return self.chain[-1]
+    
+    def proof_of_work(self, previous_proof):
+        new_proof = 1 # to solve the prob we have to increment this as a base
+        check_proof = False
+        while check_proof is False:
+            hash_operation =  hashlib.sha256(new_proof**2 - previous_proof**2) 
         
         
         
