@@ -23,13 +23,13 @@ from flask import Flask, jsonify
 class blockchain:    
     def __init__(self):
         self.chain = [] # chain containing the chains --> list
-        self.create_block(proof = 1, preHash= '0')
+        self.create_block(proof = 1, previous_hash= '0')
                                     #SHA256 can only use encoded STRINGS and hence we took it as a string
     def create_block(self, proof, previous_hash):
         block = {'index': len(self.chain) +1,
                  'timeStamp': str(datetime.datetime.now()),
                  'proof': proof,
-                 'previousHash':previous_hash
+                 'previous_hash':previous_hash
                  # we can add any data to the blockchain by adding any key here
                  }
         self.chain.append(block) # chain is a list and hence we used its append function
@@ -53,6 +53,13 @@ class blockchain:
         encoded_block = json.dumps(block, sort_keys = True).encode()
         return haslib.sha256(encoded_block).hexdigest()
     
+    def is_chain_valid(self, chain):
+        prev_block = chain[0]
+        block_index = 1
+        while block_index < len(chain):
+            block = chain[block_index]
+            if block['previous_hash'] != self.hash(prev_block):
+                
             
             
             
