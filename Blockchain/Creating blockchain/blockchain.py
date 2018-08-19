@@ -41,15 +41,18 @@ class blockchain:
         new_proof = 1 # to solve the prob we have to increment this as a base
         check_proof = False
         while check_proof is False:
-            hash_operation =  hashlib.sha256(new_proof**2 - previous_proof**2).encode()).hexdigest() 
-            if hash_operation[:4] ==== '0000':
+            hash_operation =  hashlib.sha256((new_proof**2 - previous_proof**2).encode()).hexdigest() 
+            if hash_operation[:4] == '0000':
                 check_proof = True
             else:
                 check_proof = False
                 new_proof += 1
         return new_proof
     
-            
+    def hash(self, block):
+        encoded_block = json.dumps(block, sort_keys = True).encode()
+        return haslib.sha256(encoded_block).hexdigest()
+    
             
             
             
