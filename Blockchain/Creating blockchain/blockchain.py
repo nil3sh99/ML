@@ -19,6 +19,7 @@ from flask import Flask, jsonify
 
 
 # Building a blockchain
+            hash_operation =  hashlib.sha256((new_proof**2 - previous_proof**2).encode()).hexdigest() 
 
 class blockchain:    
     def __init__(self):
@@ -69,6 +70,17 @@ class blockchain:
             block_index += 1
             
         return True
+    
+# Part2 - MIning the blockchain
+
+app = Flask(__name__)
+
+# crating our blockchain
+Blockchain = blockchain()
+    
+    
+    
+    
 
             
             
